@@ -16,14 +16,6 @@ const { TextControl, PanelRow,FormTokenField } = wp.components;
  *
  * @since 1.0.0
  */
-/**
-<TextControl
-						className="ccgs-translated-by"
-						label={ __( 'Translated by' ) }
-						value={ this.props.metaFieldValue || '' }
-						onChange={ this.props.setMetaFieldValue }
-					/>
-*/					
 
 class CcgsTranslatedBy extends React.Component {
 	render() {
