@@ -2,7 +2,7 @@
 
 cleverconnected gutenberg sidebar. Plugin for post meta data
 
-_Solution for the WordPress Gutenberg technical assistance contact [@ffxblue](https://ambition4clients.nl/)_ 
+_Solution for the WordPress Gutenberg technical assistance contact [@cleverconnect](https://ambition4clients.nl/)_ 
 
 ## Meta fields  are as follows ... 
 - '_ccgs_hide_in_listing' => 'boolean',
