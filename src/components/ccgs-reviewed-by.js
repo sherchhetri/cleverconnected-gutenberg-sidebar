@@ -21,13 +21,6 @@ const { TextControl, PanelRow ,FormTokenField } = wp.components;
 
 class CcgsReviewedBy extends React.Component {
 
-//value={ this.props.metaFieldValue || '' }
-// <TextControl
-//						className="ccgs-reviewed-by"
-//						label={ __( 'Reviewed by' ) }
-//						value={ this.props.users?.map(user=>user.nickname) || '' }
-//						onChange={ this.props.setMetaFieldValue }
-//					/> 
 
 	render() {
 		return (
