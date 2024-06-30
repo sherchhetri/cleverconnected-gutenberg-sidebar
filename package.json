@@ -1,0 +1,30 @@
+{
+    "name": "cleverconnected-gutenberg-sidebar",
+    "version": "0.1.0",
+    "description": "This post sidebar is compatiable to gutenberg post editor,  written with ESNext standard and JSX support – build step required.",
+    "author": "The WordPress Contributors",
+    "license": "GPL-2.0-or-later",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "wp-scripts build",
+        "format:js": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "packages-update": "wp-scripts packages-update",
+        "start": "wp-env start --update",
+        "start-debug": "wp-env start --debug",
+        "stop": "wp-env stop",
+
+        "clean-db": "wp-env clean all"
+    },
+    "dependencies": {
+        "@wordpress/block-editor": "latest",
+        "@wordpress/blocks": "latest",
+        "@wordpress/i18n": "latest",
+        "react": "17.0.0"
+    },
+    "devDependencies": {
+        "@wordpress/env": "latest",
+        "@wordpress/scripts": "^19.2.4"
+    }
+}
