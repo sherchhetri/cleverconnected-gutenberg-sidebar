@@ -2,9 +2,9 @@
 /**
  * Plugin Name: cleverconnected gutenberg sidebar
  * Plugin URI:  https://cleverconnected.nl/
- * Description: Sidebar for the block editor as metadata.
+ * Description: Sidebar for the block editor as metadata. In post your can use meta data as shortcode(cc_reviewed_by and cc_translated_by).
  * Author: 		Ambition4Clients B.V.
- * Version  :   1.0.0
+ * Version  :   1.0.1
  * Author URI:  https://ambition4clients.nl/
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -50,7 +50,22 @@ class cleverconnectedGutenbergSidebar {
 	public function __construct() {
 		add_action( 'init', [ $this, 'ccgs_settings_register_meta_fields' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_scripts' ] );
+		add_shortcode("cc_reviewed_by",  [ $this,"cc_reviewed_by_shortcode"] );
+		add_shortcode("cc_translated_by",  [ $this,"cc_translated_by_shortcode"] );
 	}
+
+
+
+function cc_reviewed_by_shortcode($attrs, $content = null) {
+    global $post;
+ 	$reviewed_by  =get_post_meta($post->ID,"_ccgs_reviewed_by",true);
+    return '<div class="ccgs-reviewed-by"> ' .  $reviewed_by  . '</div>';
+}
+function cc_translated_by_shortcode($attrs, $content = null) {
+    global $post;
+ 	$translated_by  =get_post_meta($post->ID,"_ccgs_translated_by",true);
+    return '<div class="ccgs-translated-by"> ' .  $translated_by  . '</div>';
+}
 
 	/**
 	 * Register fields to the rest API.

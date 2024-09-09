@@ -27,6 +27,7 @@ const { PanelBody } = wp.components;
  */
 class Sidebar extends React.Component {
 	render() {
+		const name = "jack";
 		return (
 			<>
 				<PluginSidebarMoreMenuItem
@@ -49,7 +50,10 @@ class Sidebar extends React.Component {
 						</div>
 					</PanelBody>
 				</PluginSidebar>
+
+				
 			</>
+			
 		);
 	}
 }
